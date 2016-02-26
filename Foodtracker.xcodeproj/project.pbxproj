@@ -388,6 +388,7 @@
 				14DA427C1C7F5C330090F1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14DA427D1C7F5C330090F1D7 /* Build configuration list for PBXNativeTarget "FoodtrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +397,7 @@
 				14DA427F1C7F5C330090F1D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
