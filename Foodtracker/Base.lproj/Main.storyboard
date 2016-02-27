@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -61,12 +62,23 @@
                                     <constraint firstItem="viX-wi-ep6" firstAttribute="leading" secondItem="4bc-mM-J3F" secondAttribute="leading" id="vhJ-uW-c9J"/>
                                 </constraints>
                             </stackView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ic2-zB-ecT">
+                                <rect key="frame" x="20" y="198" width="353" height="323"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="323" id="CfN-uM-OgJ"/>
+                                    <constraint firstAttribute="width" secondItem="ic2-zB-ecT" secondAttribute="height" multiplier="15:8" id="Htj-Eo-vR3"/>
+                                    <constraint firstAttribute="width" constant="353" id="iFC-WG-qQO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="4bc-mM-J3F" secondAttribute="trailing" id="AEG-PT-1Hk"/>
                             <constraint firstItem="4bc-mM-J3F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Eaj-qv-TkZ"/>
                             <constraint firstItem="4bc-mM-J3F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FA6-hw-CV7"/>
+                            <constraint firstItem="ic2-zB-ecT" firstAttribute="top" secondItem="4bc-mM-J3F" secondAttribute="bottom" constant="60" id="kUV-t7-Lho"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ic2-zB-ecT" secondAttribute="trailing" constant="207" id="khX-TQ-hEf"/>
+                            <constraint firstItem="ic2-zB-ecT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kr4-F4-WDc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -84,4 +96,7 @@
             <point key="canvasLocation" x="278" y="279"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="1000" height="1000"/>
+    </resources>
 </document>
