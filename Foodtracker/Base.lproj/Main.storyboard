@@ -62,8 +62,8 @@
                                     <constraint firstItem="viX-wi-ep6" firstAttribute="leading" secondItem="4bc-mM-J3F" secondAttribute="leading" id="vhJ-uW-c9J"/>
                                 </constraints>
                             </stackView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="ic2-zB-ecT">
-                                <rect key="frame" x="20" y="221" width="353" height="323"/>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="297" placeholderIntrinsicHeight="302" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="ic2-zB-ecT">
+                                <rect key="frame" x="20" y="202" width="297" height="302"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="323" id="CfN-uM-OgJ"/>
@@ -74,6 +74,10 @@
                                     <outletCollection property="gestureRecognizers" destination="yZQ-7s-X3b" appends="YES" id="XgI-t0-EBg"/>
                                 </connections>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="3iF-ui-NPl" customClass="RatingControl" customModule="Foodtracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="512" width="163" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,6 +111,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1000" height="1000"/>
+        <image name="Image-1" width="320" height="320"/>
     </resources>
 </document>
