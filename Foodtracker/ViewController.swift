@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+//Impgae picker control delegate is used to help user pick an Image.
+
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
 
@@ -16,6 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mealNameLabel: UILabel!
     
+    @IBOutlet weak var photoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +52,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
         mealNameLabel.text = textField.text
         
     }
+    
+    // MARK: UIImagePickerControllerelegate
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        // The info Directory Contains multiple representations of the image and this uses th original.
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        // Set The photoImageView o display the selcted Image
+        photoImageView.image = selectedImage
+        
+        //Dismiss the picker
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        
+    }
+
+    
 
     // MARK: Actions
+    
+    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        // The above ensures that if this is tappe dthen the keyboard is disposed of properly.
+        //
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .PhotoLibrary
+        //imagePickerController.sourceType = .Camera
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
+    
     
     @IBAction func setDefaultLabelText(sender: UIButton) {
         mealNameLabel.text = "Default label"
